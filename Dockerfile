@@ -1,5 +1,6 @@
-FROM node:14-alpine3.20
+FROM python:3.9-slim
+
 WORKDIR /app
-COPY . .
-RUN npm install
-CMD ["npm", "start"]
+COPY . /app
+
+CMD ["python", "hello.py"]
